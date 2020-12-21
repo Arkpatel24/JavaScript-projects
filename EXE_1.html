@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <script>
+            var a=Math.round(Math.random()*10);
+            var b=Math.round(Math.random()*10);
+            var c=a+b;
+            var returnValue;
+            var input=prompt("What is sum of"+a+"+"+b);
+            while(true)
+            {
+                if(input=c)
+                {
+                    alert("Your answer is correct");
+                }
+                else if(input!=c)
+                {
+                   alert("Your answer is wrong please try again");
+                    input=prompt("What is sum of"+a+"+"+b); 
+                    
+                }
+                returnValue=confirm("Do you want another question");
+                input=prompt("What is sum of"+a+"+"+b);
+               
+            }
+            document.write("Goodbye");
+            
+        </script>    
+    </body>
+</html>

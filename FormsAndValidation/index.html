@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form action="thankyou.html" name="myForm">
+            Name:-<input type="text" id="name">
+            Cars:-<select id="car">
+                <option value="-1">Select a car</option>
+                <option value="honda">Select a car</option>
+                <option value="toyota">Select a car</option>
+                <option value="ford">S</option>
+                </select>
+             <span id="msg"></span></br>
+            <input type="submit" value="submit">
+        </form>
+        
+        <script>
+            document.myForm.onsubmit=function()
+            {
+                return validate();
+            };
+            
+            var validate = function()
+            {
+                var isvalid=true;
+                var car = document.getElementById("car").value;
+                var name = document.getElementById("name").value;
+                var msg =document.getElementById("msg");
+                if(name == "" && car == 0)
+                {
+                    msg.innerHTML="This field is required";
+                    msg.style.color="red";
+                    isvalid=false;
+                }
+                return isvalid;
+            };
+            </script>
+    </body>
+</html>

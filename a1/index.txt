@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Assignment1 for Ark Patel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <center>
+        <h1>Assignment 1</h1>
+        <h1>ARK PATEL</h1>
+        <h1>Instructor:Maninder Kaur Tadla </h1>
+        <hr>
+        <p>
+            Type 1 for selecting Rock<br><br>
+            Type 2 for selecting Paper<br><br>
+            Type 3 for selecting Scissor<br><br>
+            Click START to start game.
+        </p>
+        <button onclick="redirect()">Start</button>
+
+        <script>
+            function redirect() 
+            {
+                 location.href="game.html";
+            }
+        </script>
+        </center>
+    </body>
+</html>

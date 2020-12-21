@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form>
+            <label>Enter a number: <input type="text" id="num"></label><br>
+            <input type="button" value="Find Cube" id="btn">
+            <p id="result"></p>
+        </form>
+        <script>
+            var btn = document.getElementById("btn");
+            var result = document.getElementById("result");
+            btn.onclick = function()// trigger onclick event
+            {
+                var num = document.getElementById("num").value;// read value from textbox
+                var cube = num * num * num;
+                result.innerHTML = "Cube of " + num + " is: " + cube;// display result in <p>
+            }
+            </script>
+    </body>
+</html>

@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html>
+    <head>
+        <title>Assignment1 for Ark Patel</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <form>
+            <input type="button" value="Exit" onclick="redirect();">
+        </form>
+        <script>
+            var c1=0;
+            var c2=0; 
+            
+            var userChoice=confirm("Let Start");
+            if(userChoice===true)
+            {
+                fn();
+            }
+ 
+            
+            function fn()
+            {
+                var userChoice=prompt("Enter \n1 for Rock \n2 for Paper \n3 for Scissor");
+                if(userChoice==1)
+                    {
+                        userChoice=1;
+                        alert("You select Rock");
+                    }
+                else if(userChoice==2)
+                    {
+                        userChoice=2;
+                        alert("You select Paper");
+                    }
+               else if(userChoice==3)
+                    {
+                        userChoice=3;
+                        alert("You select Scissor");
+                    }
+               else
+                    {
+                        alert("Please Enter correct value");
+                        fn();
+                    }
+
+                var computerChoice=Math.round(Math.random()*2+1);
+                if (computerChoice==1)
+                {
+                    computerChoice = 1;
+                    alert("Computer select Rock");
+                }
+                else if(computerChoice==2)
+                {
+                    computerChoice = 2;
+                    alert("Computer select Paper");
+                }
+                else if(computerChoice==3)
+                {
+                    computerChoice = 3;
+                    alert("Computer select Scissor");
+                }
+
+                var compare = function(choice1,choice2)
+                {
+                    if (choice1 === choice2)
+                    {
+                        c1=c1+1;
+                        c2=c2+1;
+                        return "It's a tie";
+                    }
+                   if (choice1 === 1) 
+                   {
+                       if (choice2 === 3)
+                       {
+                           // rock wins
+                           c1=c1+1;
+                           return "You win";
+                       }
+                       else
+                       {
+                           // paper wins
+                           c2=c2+1;
+                           return "Computer win";
+                       }
+                   }
+                   if (choice1 === 2)
+                   {
+                       if (choice2 === 1)
+                       {
+                           // paper wins
+                           c1=c1+1;
+                           return "You win";
+                       }
+                       else
+                       {
+                           // scissors wins
+                           c2=c2+1;
+                           return "Computer win";
+                       }
+                   }
+                   if (choice1 === 3)
+                   {
+                       if (choice2 === 1)
+                       {
+                           // rock wins
+                           c2=c2+1;
+                           return "Computer win";
+                       }
+                       else
+                       {
+                           // scissors wins
+                           c1=c1+1;
+                           return "You win";
+                       }
+                   }
+               }
+               // Run the compare function
+               var result = compare(userChoice,computerChoice);
+               // Display results
+               alert(result + "\n your score :"+c1+"\ncomputer score:"+c2);
+           }
+
+                    
+               do
+               {
+               var returnValue=confirm("Do you want to play again");
+               if(returnValue===true)
+               {
+                   fn();
+               }
+               else
+               {
+                   alert("Final Score"+"\n your score :"+c1+"\ncomputer score:"+c2);
+                   break;
+               }
+               }while(true);
+
+
+               function redirect() 
+               {
+                    location.href="index.html";
+               }
+        </script>
+        
+    </body>
+</html>
